@@ -27,8 +27,3 @@ table=client.create_table(table)
 print("table created successfully")
 
     
-----to exexute the python file----
-python python_amazon_status.py
-
------to remove the python file----
-rm python_amazon_status.py
