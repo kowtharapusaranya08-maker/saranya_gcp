@@ -1,1 +1,11 @@
-fffffffffff
+#loading the avro file into bigquery
+
+gcloud storage cp C:\Users\Admin\Downloads\transactions.avro gs://saranya_b50
+
+bq load --source_format=AVRO b50_dataset.tran_data gs://saranya_b50/transactions.avro
+
+#loading the ndjson file into bigquery
+
+gcloud storage cp C:\Users\Admin\Downloads\transactions.ndjson gs://saranya_b50
+
+bq load --source_format=NEWLINE_DELIMITED_JSON b50_dataset.transaction_data gs://saranya_b50/transactions.ndjson C:\Users\Admin\Downloads\transactions_schema.json
